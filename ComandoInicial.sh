@@ -1,14 +1,15 @@
 #!/bin/bash
 
 //Iniciando
-
 sudo apt update && sudo apt upgrade -y
 sudo apt install docker.io
 sudo systemctl start docker
 sudo systemctl enable docker
 
-//Puxando imagem do mysql na VM
+//Baixando JRE do Java
+sudo apt-get install default-jre
 
+//Puxando imagem do mysql na VM
 sudo docker pull mysql:5.7
 sudo docker run -d -p 3306:3306 --name Specula -e "MYSQL_DATABASE=specula" -e "MYSQL_ROOT_PASSWORD=urubu100" mysql:5.7
 
