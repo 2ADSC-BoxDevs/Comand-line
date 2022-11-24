@@ -19,18 +19,8 @@ if [ $? -eq 0 ]
    sleep 2
    echo "$(tput setaf 10)[Bot SPECULA assistant]:$(tput setaf 7) JAVA instalado!"
    fi
-sleep 2
-echo "$(tput setaf 10)[Bot SPECULA assistant]:$(tput setaf 7) Verificando se já tem DOCKER instalado na sua máquina..."
-docker --version
-sleep 2
-if [ $? -eq 0 ]  
-  then
-  echo "$(tput setaf 10)[Bot SPECULA assistant]:$(tput setaf 7) Você já tem DOCKER instalado na sua máquina..."
-
-  else
-  echo "$(tput setaf 10)[Bot SPECULA assistant]:$(tput setaf 7) Você já tem DOCKER instalado na sua máquina..."
   sleep 2
-  echo "$(tput setaf 10)[Bot SPECULA assistant]:$(tput setaf 7) Vamos instalar..."
+  echo "$(tput setaf 10)[Bot SPECULA assistant]:$(tput setaf 7) Vamos instalar o DOCKER também..."
   sudo apt install docker.io
   sudo systemctl start docker
   sudo systemctl enable docker
