@@ -27,7 +27,7 @@ if [ $? -eq 0 ]
   sleep 2
   echo "$(tput setaf 10)[Bot SPECULA assistant]:$(tput setaf 7) Vamos instalar a imagem do MYSQL..."
   sleep 2
-  docker build -t specula_bd .
-  docker run specula_bd
+  sudo docker build -t specula_bd .
+  sudo docker run specula_bd
 
 
