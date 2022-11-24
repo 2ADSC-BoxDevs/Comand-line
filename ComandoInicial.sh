@@ -29,6 +29,5 @@ if [ $? -eq 0 ]
   sleep 2
   docker build -t specula_bd .
   docker run specula_bd
-  fi
 
 
