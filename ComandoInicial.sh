@@ -19,15 +19,15 @@ if [ $? -eq 0 ]
    sleep 2
    echo "$(tput setaf 10)[Bot SPECULA assistant]:$(tput setaf 7) JAVA instalado!"
    fi
-  sleep 2
+   sleep 2
   echo "$(tput setaf 10)[Bot SPECULA assistant]:$(tput setaf 7) Vamos instalar o DOCKER também..."
-  sudo apt install docker.io
-  sudo systemctl start docker
-  sudo systemctl enable docker
-  sleep 2
+   sudo apt install docker.io
+   sudo systemctl start docker
+   sudo systemctl enable docker
+   sleep 2
   echo "$(tput setaf 10)[Bot SPECULA assistant]:$(tput setaf 7) Vamos instalar a imagem do MYSQL..."
-  sleep 2
-  sudo docker build -t specula_bd .
-  sudo docker run specula_bd
+   sleep 2
+   sudo docker build -t specula_bd .
+   sudo docker run specula_bd 
 
 
