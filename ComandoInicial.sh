@@ -34,10 +34,10 @@ if [ $? -eq 0 ]
 
    sudo docker network create "Specula"
 
-  sudo docker build -t  specula .
+  sudo docker build -t  specula  .
   
  
 
- sudo docker run --network "specula" -d -p 3306:3306 --name specula -e MYSQL_ROOT_PASSWORD=urubu100 -e MYSQL_DATABASE=specula specula
+ sudo docker run --network "specula" -d -p 3306:3306 --name Specula -e MYSQL_ROOT_PASSWORD=urubu100 -e MYSQL_DATABASE=specula specula
 
 
