@@ -37,6 +37,6 @@ if [ $? -eq 0 ]
   
  
 
- sudo docker run --network "specula" -d -p 3306:3306 --name specula_bd -e MYSQL_ROOT_PASSWORD=urubu100 -e MYSQL_DATABASE=specula dockerfile
+ sudo docker run --network "specula" -d -p 3306:3306 --name specula -e MYSQL_ROOT_PASSWORD=urubu100 -e MYSQL_DATABASE=specula dockerfile
 
 
