@@ -11,6 +11,6 @@ create table historico_maquina (
     memoria_disponivel varchar(30),
     processador_em_uso varchar(30),
     disco_em_uso varchar(30),
-    data_hora_registro varchar(30) datetime default current_timestamp,
+    data_hora_registro datetime default current_timestamp,
     discoEmUso varchar(40)
 );

@@ -19,7 +19,7 @@ if [ $? -eq 0 ]
    sudo docker build -t my-java-app .
 
    sudo docker run -it --rm --name my-running-app my-java-app
-   
+
    sleep 2
    echo "$(tput setaf 10)[Bot SPECULA assistant]:$(tput setaf 7) JAVA instalado!"
    fi
@@ -34,10 +34,10 @@ if [ $? -eq 0 ]
 
    sudo docker network create "Specula"
 
-  sudo docker build -t dockerfile .
+  sudo docker build -t  specula .
   
  
 
- sudo docker run --network "specula" -d -p 3306:3306 --name specula -e MYSQL_ROOT_PASSWORD=urubu100 -e MYSQL_DATABASE=specula dockerfile
+ sudo docker run --network "specula" -d -p 3306:3306 --name specula -e MYSQL_ROOT_PASSWORD=urubu100 -e MYSQL_DATABASE=specula specula
 
 
