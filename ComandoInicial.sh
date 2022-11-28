@@ -15,11 +15,12 @@ if [ $? -eq 0 ]
    echo "$(tput setaf 10)[Bot SPECULA assistant]:$(tput setaf 7) Você não tem o JAVA instalado..."
    sleep 2 
    echo "$(tput setaf 10)[Bot SPECULA assistant]:$(tput setaf 7) Vamos instalar ele para você..."
-   sleep 2
+  
    sudo docker build -t my-java-app .
 
    sudo docker run -it --rm --name my-running-app my-java-app
-  
+   
+   sleep 2
    echo "$(tput setaf 10)[Bot SPECULA assistant]:$(tput setaf 7) JAVA instalado!"
    fi
    sleep 2
