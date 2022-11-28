@@ -31,7 +31,7 @@ if [ $? -eq 0 ]
   echo "$(tput setaf 10)[Bot SPECULA assistant]:$(tput setaf 7) Vamos instalar a imagem do MYSQL..."
    sleep 2
 
-   sudo docker network create "specula"
+   sudo docker network create "Specula"
 
   sudo docker build -t dockerfile .
   
