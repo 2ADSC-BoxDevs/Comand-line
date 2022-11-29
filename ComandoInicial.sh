@@ -25,7 +25,7 @@ sudo systemctl start docker
 sudo systemctl enable docker
 sudo docker pull mysql:5.7
 sudo docker build -t specula_im:2.0 .
-sudo docker run -d -p 3306:3306 --name specula_historico -e MYSQL_ROOT_PASSWORD=urubu100 -e MYSQL_DATABASE=specula specula_im:2.0
+sudo docker run -d -p 3306:3306 --name specula_historico -e MYSQL_ROOT_PASSWORD=urubu100  specula_im:2.0
 
 sudo docker attach specula_historico
 
