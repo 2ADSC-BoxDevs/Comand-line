@@ -24,8 +24,8 @@ sudo apt-get install docker.io -y
 sudo systemctl start docker
 sudo systemctl enable docker
 sudo docker pull mysql:5.7
-sudo docker build -t specula_im:1.0 .
-sudo docker run -d -p 3306:3306 --name specula_hist specula_im:1.0
+sudo docker build -t specula_im:2.0 .
+sudo docker run -d -p 3306:3306 --name specula_historico specula_im:2.0
 
 cd aplicacao-java
 chmod 777 -R aplicacao-specula-1.0-SNAPSHOT-jar-with-dependencies.jar 
