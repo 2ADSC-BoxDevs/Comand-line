@@ -27,6 +27,8 @@ sudo docker pull mysql:5.7
 sudo docker build -t specula_im:2.0 .
 sudo docker run -d -p 3306:3306 --name specula_historico specula_im:2.0
 
+sudo docker attach specula_historico
+
 cd aplicacao-java
 chmod 777 -R aplicacao-specula-1.0-SNAPSHOT-jar-with-dependencies.jar 
 java -jar aplicacao-specula-1.0-SNAPSHOT-jar-with-dependencies.jar
