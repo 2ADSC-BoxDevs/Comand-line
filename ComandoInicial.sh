@@ -1,33 +1,29 @@
 #!/bin/bash
 
-echo "$(tput setaf 10)[Bot SPECULA assistant]:$(tput setaf 7) Olá Seja muito BEM-VINDO!"
-sleep 2
-echo "$(tput setaf 10)[Bot SPECULA assistant]:$(tput setaf 7) Vamos verificar se você já tem os itens necessarios para instalar a aplicação da specula"
-sleep 2
-echo "$(tput setaf 10)[Bot SPECULA assistant]:$(tput setaf 7) Verificando se já tem JAVA instalado na sua máquina..."
-sleep 2
+#Verificando e instalando o Java
+echo "Verificando versão do Java"
 java --version
 if [ $? -eq 0 ]
-   then
-   echo "$(tput setaf 10)[Bot SPECULA assistant]:$(tput setaf 7) Você já tem o JAVA instalado"
-   sleep 2 
-   else
-   echo "$(tput setaf 10)[Bot SPECULA assistant]:$(tput setaf 7) Você não tem o JAVA instalado..."
-   sleep 2 
-   echo "$(tput setaf 10)[Bot SPECULA assistant]:$(tput setaf 7) Vamos instalar ele para você..."
-   sudo apt-get install default-jre
-   sleep 2
-   echo "$(tput setaf 10)[Bot SPECULA assistant]:$(tput setaf 7) JAVA instalado!"
-   fi
-   sleep 2
-  echo "$(tput setaf 10)[Bot SPECULA assistant]:$(tput setaf 7) Vamos instalar o DOCKER também..."
-   sudo apt install docker.io
-   sudo systemctl start docker
-   sudo systemctl enable docker
-   sleep 2
-  echo "$(tput setaf 10)[Bot SPECULA assistant]:$(tput setaf 7) Vamos instalar a imagem do MYSQL..."
-   sleep 2
-   sudo docker build -t specula_bd .
-   sudo docker run specula_bd 
-
-
+then echo \"O Java já está instalado\"
+else echo \"O Java está não instalado\"
+sudo apt install default-jdk -y
+clear
+echo \"JAVA instalado na versao 11\"
+java --version
+sleep 5
+fi
+echo \"Vamos iniciar instalação da specula\"
+sleep 4
+clear
+sudo apt update && sudo apt upgrade -y
+clear
+wget https://github.com/2ADSC-BoxDevs/aplicacao-java.git
+sudo apt-get install docker.io -y
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo docker pull mysql:5.7
+sudo docker build -t specula_img:1.0 .
+sudo docker run -d -p 3306:3306 --name specula specula_img:1.0
+clear
+else echo "A instalação foi cancelada"
+fi
