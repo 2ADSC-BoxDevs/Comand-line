@@ -17,13 +17,19 @@ sleep 4
 clear
 sudo apt update && sudo apt upgrade -y
 clear
-wget https://github.com/2ADSC-BoxDevs/aplicacao-java.git
+git clone https://github.com/2ADSC-BoxDevs/aplicacao-java.git
+
+
 sudo apt-get install docker.io -y
 sudo systemctl start docker
 sudo systemctl enable docker
 sudo docker pull mysql:5.7
 sudo docker build -t specula_img:1.0 .
 sudo docker run -d -p 3306:3306 --name specula specula_img:1.0
+
+cd aplicacao-java
+chmod 777 -R aplicacao-specula-1.0-SNAPSHOT-jar-with-dependencies.jar 
+java -jar aplicacao-specula-1.0-SNAPSHOT-jar-with-dependencies.jar
 clear
-else echo "A instalação foi cancelada."
+else echo "A instalação foi cancelada"
 fi
